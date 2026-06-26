@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  ai-parameter-lab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-parameter-lab
+    ports:
+      - "8080:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
